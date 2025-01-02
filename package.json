@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "build": "next build && next export",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "keywords": [],
-  "author": "",
+  "author": "Yash Bhandare",
+  "homepage": "https://yashbhandare.github.io",
   "license": "ISC",
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",
@@ -28,5 +31,8 @@
     "slick-carousel": "^1.8.1",
     "vite": "^6.0.3",
     "yet-another-react-lightbox": "^3.21.7"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   }
 }

@@ -1,5 +1,5 @@
 module.exports = {
-  basePath: '/yashbhandare.github.io',
-  assetPrefix: '/yashbhandare.github.io/',
+  basePath: '/www.yashbhandare.com',
+  assetPrefix: '/www.yashbhandare.com/',
   trailingSlash: true,
 };

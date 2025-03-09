@@ -7,9 +7,11 @@ export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const router = useRouter();
 
+  const basePath = '/yashbhandare.github.io'
+
   const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "Music", href: "/music" },
+    { label: "Home", href: `${basePath}/about` },
+    { label: "Music", href: `${basePath}/music` },
     { label: "Originals", href: "/originals" },
     { label: "Piano", href: "/piano" },
     { label: "Gallery", href: "/gallery" },

@@ -9,11 +9,11 @@
     "export": "next export",
     "build": "next build && next export",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "deploy": "npm run build && npm run export && gh-pages -d out -b gh-pages"
   },
   "keywords": [],
   "author": "Yash Bhandare",
-  "homepage": "https://yashbhandare.github.io",
+  "homepage": "https://yashbhandare.github.io/yashbhandare.github.io",
   "license": "ISC",
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",

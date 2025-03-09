@@ -9,11 +9,12 @@
     "export": "next export",
     "build": "next build && next export",
     "predeploy": "npm run build",
-    "deploy": "npm run build && npm run export && gh-pages -d out -b gh-pages"
+    "deploy": "npm run build && npm run export && gh-pages -d out -b gh-pages",
+    "live": "git push origin `git subtree split --prefix out main`:gh-pages --force"
   },
   "keywords": [],
   "author": "Yash Bhandare",
-  "homepage": "https://yashbhandare.github.io/yashbhandare.github.io",
+  "homepage": "https://yashbhandare.github.io",
   "license": "ISC",
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",

@@ -9,13 +9,7 @@ export default function Gallery() {
   };
 
   const images = importAll(require.context("../../public/images/gallery", false, /\.(png|jpe?g|svg)$/));
-console.log("=====", images)
-  const photos = randomizeOrder(images).map(it => ({
-    src: it.src,
-  }))
-
-
-
+  const photos = randomizeOrder(images).map(it => it)
   return (
     <div
       style={{

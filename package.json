@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "start": "next start",
-    "export": "next export",
-    "build": "next build && next export",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "npm run build && npm run export && gh-pages -d out -b gh-pages",
-    "live": "git push origin `git subtree split --prefix out main`:gh-pages --force"
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "Yash Bhandare",
@@ -21,19 +20,29 @@
     "@chakra-ui/react": "^2.10.4",
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
-    "@vitejs/plugin-react": "^4.3.4",
     "framer-motion": "^11.12.0",
     "image-size": "^1.1.1",
-    "next": "^15.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-icons": "^5.3.0",
-    "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1",
-    "vite": "^6.0.3",
-    "yet-another-react-lightbox": "^3.21.7"
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "^5.0.1",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "gh-pages": "^6.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

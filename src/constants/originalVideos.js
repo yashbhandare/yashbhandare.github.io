@@ -1,4 +1,4 @@
-export const originalVideos = [
+const originalVideos = [
   {
     title: "Eternal Twilight - Yash Bhandare",
     id: "M-l4eY8engQ",
@@ -15,3 +15,5 @@ export const originalVideos = [
     description: "Another great song",
   },
 ];
+
+export default originalVideos;

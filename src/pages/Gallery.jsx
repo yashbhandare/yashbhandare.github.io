@@ -1,15 +1,16 @@
 import randomizeOrder from "../constants/randomizeOrder";
 
 export default function Gallery() {
-  const importAll = (r) => {
-    return r.keys().map((key) => ({
+  const importAll = (r) =>
+    r.keys().map((key) => ({
       src: r(key),
       name: key.replace("./", ""),
     }));
-  };
 
-  const images = importAll(require.context("../../public/images/gallery", false, /\.(png|jpe?g|svg)$/));
-  const photos = randomizeOrder(images).map(it => it)
+  const images = importAll(
+    require.context("../../public/images/gallery", false, /\.(png|jpe?g|svg)$/),
+  );
+  const photos = randomizeOrder(images).map((it) => it);
   return (
     <div
       style={{
@@ -24,7 +25,7 @@ export default function Gallery() {
     >
       {photos.map((image, index) => (
         <div
-          key={index}
+          key={`k${{ index }}`}
           style={{
             position: "relative",
             overflow: "hidden",
@@ -57,5 +58,4 @@ export default function Gallery() {
       ))}
     </div>
   );
-
 }

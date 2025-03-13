@@ -77299,11 +77299,9 @@ const res6 = {
   ],
   "targetId": "68266dbd-0000-21f0-b40c-14c14ee6d750"
 }
-const mappedContents = () => {
-  return res6.continuationItems.filter(it => it.richItemRenderer).map(it =>  ({
+const mappedContents = () => res6.continuationItems.filter(it => it.richItemRenderer).map(it =>  ({
     title: it.richItemRenderer.content.videoRenderer.title.runs[0].text,
     id:  it.richItemRenderer.content.videoRenderer.navigationEndpoint.watchEndpoint.videoId,
-  }));
-}
+  }))
 
 console.log(mappedContents());

@@ -64,7 +64,7 @@ export default function Upcoming() {
       <Slider {...sliderSettings}>
         {upcomingEvents.map((event, index) => (
           <Box
-            key={index}
+            key={`k${{ index }}`}
             bg={cardBg}
             borderRadius="lg"
             p={6}

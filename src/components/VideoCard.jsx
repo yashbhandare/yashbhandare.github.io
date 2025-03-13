@@ -1,7 +1,7 @@
-import React from 'react';
-import { Box, Image, Text, Button, useColorModeValue } from '@chakra-ui/react';
+import React from "react";
+import { Box, Image, Text, Button, useColorModeValue } from "@chakra-ui/react";
 
-const VideoCard = ({ video }) => {
+function VideoCard({ video }) {
   const cardBg = useColorModeValue("white", "#00111a");
   const textColor = useColorModeValue("black", "white");
   const descriptionColor = useColorModeValue("gray.600", "gray.400");
@@ -54,12 +54,14 @@ const VideoCard = ({ video }) => {
         size="sm"
         width="100%"
         mt="auto"
-        onClick={() => window.open(`https://www.youtube.com/embed/${video.id}`, "_blank")}
+        onClick={() =>
+          window.open(`https://www.youtube.com/embed/${video.id}`, "_blank")
+        }
       >
         Watch Video
       </Button>
     </Box>
   );
-};
+}
 
 export default VideoCard;

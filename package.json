@@ -9,7 +9,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
+    "lint:fix": "eslint --fix ."
   },
   "keywords": [],
   "author": "Yash Bhandare",
@@ -31,7 +33,17 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "gh-pages": "^6.3.0",
+    "prettier": "^3.5.3"
   },
   "browserslist": {
     "production": [

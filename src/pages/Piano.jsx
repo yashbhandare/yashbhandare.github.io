@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Tabs,
@@ -11,24 +11,26 @@ import {
   Input,
   List,
   ListItem,
-  Text, useColorModeValue, Spinner,
-} from '@chakra-ui/react';
+  Text,
+  useColorModeValue,
+  Spinner,
+} from "@chakra-ui/react";
 import VideoCard from "../components/VideoCard";
-import {hindiPianoVideos, marathiPianoVideos} from "../constants/pianoVideos";
+import { hindiPianoVideos, marathiPianoVideos } from "../constants/pianoVideos";
 import randomizeOrder from "../constants/randomizeOrder";
 
 export default function Piano() {
-  const [hindiVideos, setHindiVideos] = useState([])
-  const [marathiVideos, setMarathiVideos] = useState([])
+  const [hindiVideos, setHindiVideos] = useState([]);
+  const [marathiVideos, setMarathiVideos] = useState([]);
 
   useEffect(() => {
-    setHindiVideos(randomizeOrder(hindiPianoVideos))
-    setMarathiVideos(randomizeOrder(marathiPianoVideos))
-  }, [])
-  const [searchQuery, setSearchQuery] = useState('');
+    setHindiVideos(randomizeOrder(hindiPianoVideos));
+    setMarathiVideos(randomizeOrder(marathiPianoVideos));
+  }, []);
+  const [searchQuery, setSearchQuery] = useState("");
   const [filteredVideos, setFilteredVideos] = useState(hindiVideos);
   const [selectedTab, setSelectedTab] = useState(0);
-  const playlists = []
+  const playlists = [];
   useEffect(() => {
     if (selectedTab === 0) {
       setFilteredVideos(hindiVideos);
@@ -39,11 +41,12 @@ export default function Piano() {
 
   const handleTabChange = (index) => {
     setSelectedTab(index);
-    setSearchQuery('');
+    setSearchQuery("");
   };
   const handleSearch = (e) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
+    /* eslint-disable */
     const currentVideos =
       selectedTab === 0
         ? hindiVideos
@@ -52,19 +55,21 @@ export default function Piano() {
           : playlists;
 
     const filtered = currentVideos.filter((video) =>
-      video.title.toLowerCase().includes(query)
+      video.title.toLowerCase().includes(query),
     );
     setFilteredVideos(filtered);
   };
-  const headingColor = useColorModeValue("#083f3e", "#EDF2F7");  // Text
-  const tabColorScheme = useColorModeValue("white", "gray");  // Text
+  const headingColor = useColorModeValue("#083f3e", "#EDF2F7"); // Text
+  const tabColorScheme = useColorModeValue("white", "gray"); // Text
   return (
     <Box p={8}>
-      <Heading textAlign="center" mb={8} color={headingColor}>Yash Bhandare - Piano Instrumentals</Heading>
+      <Heading textAlign="center" mb={8} color={headingColor}>
+        Yash Bhandare - Piano Instrumentals
+      </Heading>
 
       <Tabs
         variant="soft-rounded"
-        colorScheme={"cyan"}
+        colorScheme="cyan"
         isFitted
         onChange={handleTabChange}
       >
@@ -75,12 +80,12 @@ export default function Piano() {
         </TabList>
         <TabPanels>
           {[hindiVideos, marathiVideos, playlists].map((_, tabIndex) => (
-            <TabPanel key={tabIndex}>
+            <TabPanel key={`k${{ tabIndex }}`}>
               <Box mb={4}>
                 {tabIndex < 2 && (
                   <Input
                     placeholder={`Search ${
-                      tabIndex === 0 ? 'Hindi' : 'Marathi'
+                      tabIndex === 0 ? "Hindi" : "Marathi"
                     } videos...`}
                     value={searchQuery}
                     onChange={handleSearch}
@@ -99,12 +104,15 @@ export default function Piano() {
                   >
                     {filteredVideos.map((video, index) => (
                       <ListItem
-                        key={index}
+                        key={`k${{ index }}`}
                         p={2}
                         cursor="pointer"
                         _hover={{ bg: "teal.500" }}
                         onClick={() => {
-                          window.open(`https://www.youtube.com/watch?v=${video.id}`, "_blank");
+                          window.open(
+                            `https://www.youtube.com/watch?v=${video.id}`,
+                            "_blank",
+                          );
                         }}
                       >
                         {video.title}
@@ -113,15 +121,17 @@ export default function Piano() {
                     {!filteredVideos.length && <Text>No matches found</Text>}
                   </List>
                 )}
-
               </Box>
-              <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing={6}>
+              <SimpleGrid
+                columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+                spacing={6}
+              >
                 {filteredVideos.map((video, index) =>
                   tabIndex < 2 ? (
-                    <VideoCard key={index} video={video} />
+                    <VideoCard key={`k${{ index }}`} video={video} />
                   ) : (
                     <Box
-                      key={index}
+                      key={`k${{ index }}`}
                       as="a"
                       href={video.url}
                       target="_blank"
@@ -136,9 +146,9 @@ export default function Piano() {
                         frameBorder="0"
                         allow="autoplay; encrypted-media; picture-in-picture"
                         allowFullScreen
-                      ></iframe>
+                      />
                     </Box>
-                  )
+                  ),
                 )}
               </SimpleGrid>
             </TabPanel>

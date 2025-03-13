@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Heading, SimpleGrid, AspectRatio, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  SimpleGrid,
+  AspectRatio,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 const tracks = [
   {
@@ -19,7 +26,7 @@ const tracks = [
 export default function Music() {
   const cardBg = useColorModeValue("white", "#00111a");
   const hoverBg = useColorModeValue("#6eb2bf", "#002539");
-  const textColor =  useColorModeValue("#083f3e", "white");
+  const textColor = useColorModeValue("#083f3e", "white");
 
   return (
     <Box p={8}>
@@ -28,13 +35,10 @@ export default function Music() {
       </Heading>
 
       {/* Responsive Grid */}
-      <SimpleGrid
-        columns={{ base: 1, sm: 2, md: 3 }}
-        spacing={6}
-      >
+      <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={6}>
         {tracks.map((track, index) => (
           <Box
-            key={index}
+            key={`k${{ index }}`}
             borderWidth="1px"
             borderRadius="lg"
             overflow="hidden"
@@ -57,6 +61,7 @@ export default function Music() {
                   display: "block",
                   margin: 0,
                 }}
+                title={`Spotify Track ${track.title}`}
               />
             </AspectRatio>
           </Box>

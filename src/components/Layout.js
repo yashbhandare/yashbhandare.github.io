@@ -1,29 +1,25 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import {useColorModeValue} from "@chakra-ui/react";
 
 export default function Layout({ children }) {
+    const bgColor = useColorModeValue("#04475c", "#04475c");  // Background
+    const textColor = useColorModeValue("white", "#EDF2F7");
     return (
         <div>
             <Navbar/>
-            {/*<nav className="bg-gray-900 text-white p-4">*/}
-            {/*    <div className="container mx-auto flex justify-between">*/}
-            {/*        <h1 className="text-2xl font-bold">My Music Website</h1>*/}
-            {/*        <ul className="flex space-x-4">*/}
-            {/*            <li><Link to="/">Home</Link></li>*/}
-            {/*            <li><Link to="/music">Music</Link></li>*/}
-            {/*            <li><Link to="/gallery">Gallery</Link></li>*/}
-            {/*            <li><Link to="/upcoming">Upcoming</Link></li>*/}
-            {/*            <li><Link to="/contact">Contact</Link></li>*/}
-            {/*        </ul>*/}
-            {/*    </div>*/}
-            {/*</nav>*/}
-
-            {/* Page Content */}
             <main className="container mx-auto mt-8">{children}</main>
-
-            {/* Footer */}
-            <footer className="bg-gray-900 text-white text-center p-4 mt-8">
-                <p>&copy; 2025 Yash Bhandare Productions. All rights reserved.</p>
+            <footer className="bg-gray-900 text-white text-center p-4 mt-8 w-full bg-lightgrey"
+                    style={{
+                        backgroundColor: bgColor,
+                        color: textColor,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        padding: "8px",
+                    }}>
+                <div>&copy; 2025 Yash Bhandare. All rights reserved.</div>
+                <div>Unauthorized use or reproduction is prohibited.</div>
             </footer>
         </div>
     );

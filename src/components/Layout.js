@@ -23,7 +23,7 @@ export default function Layout({ children }) {
 
             {/* Footer */}
             <footer className="bg-gray-900 text-white text-center p-4 mt-8">
-                <p>&copy; 2024 My Music Website. All rights reserved.</p>
+                <p>&copy; 2025 Yash Bhandare Productions. All rights reserved.</p>
             </footer>
         </div>
     );

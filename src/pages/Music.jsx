@@ -6,20 +6,25 @@ import {
   AspectRatio,
   Text,
   useColorModeValue,
+  Button,
 } from "@chakra-ui/react";
+import { FaYoutube } from "react-icons/fa";
 
 const tracks = [
   {
     title: "Eternal Twilight",
-    url: "https://open.spotify.com/embed/track/3mVDpJPUYcuOfFDTRmCr1Q",
+    spotifyUrl: "https://open.spotify.com/embed/track/3mVDpJPUYcuOfFDTRmCr1Q",
+    youtubeUrl: "M-l4eY8engQ",
   },
   {
     title: "Aandhi Jo Chali Teri Yaadon Ki",
-    url: "https://open.spotify.com/embed/track/3b910iHKx0MsbnaYcmr6SY",
+    spotifyUrl: "https://open.spotify.com/embed/track/3b910iHKx0MsbnaYcmr6SY",
+    youtubeUrl: "4WPxGdyQq4k",
   },
   {
     title: "Aankhon Hi Aankhon Se Karti Ho Baatein",
-    url: "https://open.spotify.com/embed/track/7L6q0SK4GYNTmmSzlzOZVx",
+    spotifyUrl: "https://open.spotify.com/embed/track/7L6q0SK4GYNTmmSzlzOZVx",
+    youtubeUrl: "bVM8NcL8MxA",
   },
 ];
 
@@ -51,9 +56,14 @@ export default function Music() {
             <Text fontWeight="bold" p={4} color={textColor}>
               {track.title}
             </Text>
-            <AspectRatio ratio={16 / 9}>
+            <AspectRatio
+              ratio={16 / 9}
+              style={{
+                height: "68%",
+              }}
+            >
               <iframe
-                src={track.url}
+                src={track.spotifyUrl}
                 allow="encrypted-media"
                 aria-label={`Spotify Track ${track.title}`}
                 style={{
@@ -64,6 +74,22 @@ export default function Music() {
                 title={`Spotify Track ${track.title}`}
               />
             </AspectRatio>
+            <Button
+              colorScheme="blue"
+              variant="solid"
+              size="sm"
+              width="60%"
+              mt="auto"
+              onClick={() =>
+                window.open(
+                  `https://www.youtube.com/embed/${track.youtubeUrl}`,
+                  "_blank",
+                )
+              }
+              leftIcon={<FaYoutube />}
+            >
+              Watch Video on YouTube
+            </Button>
           </Box>
         ))}
       </SimpleGrid>

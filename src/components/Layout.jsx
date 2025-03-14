@@ -20,7 +20,7 @@ export default function Layout({ children }) {
           padding: "8px",
         }}
       >
-        <div>&copy; 2025 Yash Bhandare. All rights reserved.</div>
+        <div>&copy; 2025 Yash Bhandare Productions. All rights reserved.</div>
         <div>Unauthorized use or reproduction is prohibited.</div>
       </footer>
     </div>

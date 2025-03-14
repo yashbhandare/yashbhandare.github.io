@@ -17,6 +17,7 @@ import {
   FaSpotify,
   FaYoutube,
 } from "react-icons/fa";
+import { FACEBOOK_LINK, INSTAGRAM_LINK } from "../constants/links";
 
 export default function Home() {
   const bgColor = useColorModeValue("white", "#00111a");
@@ -41,7 +42,7 @@ export default function Home() {
               Pianist | Keyboardist
             </Text>
             <Flex gap={4} justify="center">
-              <Link to="https://instagram.com/yashgbhandare97" isExternal>
+              <Link to={INSTAGRAM_LINK} isExternal>
                 <IconButton
                   icon={<FaInstagram />}
                   aria-label="Instagram"
@@ -73,7 +74,7 @@ export default function Home() {
                   }}
                 />
               </Link>
-              <Link to="https://www.facebook.com/yashgbhandare97" isExternal>
+              <Link to={FACEBOOK_LINK} isExternal>
                 <IconButton
                   icon={<FaFacebook />}
                   aria-label="Facebook"

@@ -17,7 +17,6 @@ export default function Navbar() {
   const navLinks = [
     { label: "Home", to: "/" },
     { label: "Music", to: "/music" },
-    { label: "Originals", to: "/originals" },
     { label: "Piano", to: "/piano" },
     { label: "Gallery", to: "/gallery" },
     { label: "Upcoming", to: "/upcoming" },

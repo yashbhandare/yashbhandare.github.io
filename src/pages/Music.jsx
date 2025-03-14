@@ -12,6 +12,11 @@ import { FaYoutube } from "react-icons/fa";
 
 const tracks = [
   {
+    title: "Jaane Tamanna",
+    spotifyUrl: "https://open.spotify.com/embed/track/2u76EZnnsKTBNAtUpveZMx",
+    youtubeUrl: "vANUkJ1E54Y",
+  },
+  {
     title: "Eternal Twilight",
     spotifyUrl: "https://open.spotify.com/embed/track/3mVDpJPUYcuOfFDTRmCr1Q",
     youtubeUrl: "M-l4eY8engQ",
@@ -59,7 +64,7 @@ export default function Music() {
             <AspectRatio
               ratio={16 / 9}
               style={{
-                height: "68%",
+                height: "64.7%",
               }}
             >
               <iframe
@@ -70,6 +75,8 @@ export default function Music() {
                   border: "none",
                   display: "block",
                   margin: 0,
+                  backgroundColor: cardBg,
+                  borderRadius: "4%",
                 }}
                 title={`Spotify Track ${track.title}`}
               />

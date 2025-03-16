@@ -11,7 +11,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const upcomingEvents = [
+const latestUpdates = [
   {
     title: "To be released on 27th March 2025",
     description: "Tumse Judi Hai",
@@ -63,11 +63,11 @@ export default function Latest() {
   return (
     <Box p={8}>
       <Heading textAlign="center" mb={8}>
-        Upcoming Events
+        Latest Updates
       </Heading>
 
       <Slider {...sliderSettings}>
-        {upcomingEvents.map((event, index) => (
+        {latestUpdates.map((event, index) => (
           <Box
             key={`k${{ index }}`}
             bg={cardBg}

@@ -5,7 +5,7 @@ import Music from "./pages/Music";
 import Piano from "./pages/Piano";
 import Originals from "./pages/Originals";
 import Gallery from "./pages/Gallery";
-import Upcoming from "./pages/Upcoming";
+import Latest from "./pages/Latest";
 import Contact from "./pages/Contact";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -21,7 +21,7 @@ function App() {
             <Route path="/originals" element={<Originals />} />
             <Route path="/piano" element={<Piano />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/upcoming" element={<Upcoming />} />
+            <Route path="/latest" element={<Latest />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </Layout>

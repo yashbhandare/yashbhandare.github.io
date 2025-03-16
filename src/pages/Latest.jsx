@@ -13,12 +13,17 @@ import "slick-carousel/slick/slick-theme.css";
 
 const upcomingEvents = [
   {
-    title: "New Single Launch",
-    description: "Jaane Tamanna",
-    image: "/images/Jaane Tamanna Thumbnail.jpg",
+    title: "To be released on 27th March 2025",
+    description: "Tumse Judi Hai",
+    image: "/images/TUMSE JUDI HAI POSTER.png",
   },
   {
-    title: "New Single Launch",
+    title: "Recent Single Launch",
+    description: "Jaane Tamanna",
+    image: "/images/Jaane Tamanna.png",
+  },
+  {
+    title: "Recent Single Launch",
     description: "Jaane Tamanna",
     image: "/images/Jaane Tamanna card.jpg",
   },
@@ -51,7 +56,7 @@ const sliderSettings = {
   ],
 };
 
-export default function Upcoming() {
+export default function Latest() {
   const cardBg = useColorModeValue("gray.100", "gray.700");
   const cardText = useColorModeValue("black", "white");
 

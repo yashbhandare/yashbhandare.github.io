@@ -1,6 +1,5 @@
 import { Box, SimpleGrid, Heading, useColorModeValue } from "@chakra-ui/react";
 import VideoCard from "../components/VideoCard";
-import originalVideos from "../constants/originalVideos";
 
 export default function Originals() {
   const bgColor = useColorModeValue("white", "#00111a");
@@ -8,7 +7,6 @@ export default function Originals() {
 
   return (
     <Box p={8} bg={bgColor} minH="100vh">
-      {/* Page Heading */}
       <Heading
         textAlign="center"
         mb={8}
@@ -18,7 +16,7 @@ export default function Originals() {
         Yash Bhandare - Original Official Videos
       </Heading>
       <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing={6}>
-        {originalVideos.map((video, index) => (
+        {[].map((video, index) => (
           <VideoCard key={`k${{ index }}`} video={video} />
         ))}
       </SimpleGrid>

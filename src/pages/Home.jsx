@@ -136,7 +136,7 @@ export default function Home() {
   );
 
   return (
-    <Box bg={bgColor} p={8} maxh="100vh" textAlign="center">
+    <Box bg={bgColor} p={8} h="86vh" textAlign="center">
       <VStack spacing={6}>
         <HStack justifyContent="space-around" width="100%">
           <Image src="/images/logo.jpg" alt="Yash Bhandare" boxSize="500px" />

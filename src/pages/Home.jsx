@@ -26,6 +26,11 @@ export default function Home() {
   const rightSection = () => (
     <VStack>
       <Image src="/images/yash-nav.png" alt="Yash Bhandare" boxSize="500px" />
+    </VStack>
+  );
+
+  const infoSection = () => (
+    <VStack>
       <Heading as="h1" size="xl" color={textColor}>
         Yash Bhandare
       </Heading>
@@ -137,9 +142,15 @@ export default function Home() {
 
   return (
     <Box bg={bgColor} p={8} h="86vh" textAlign="center">
-      <VStack spacing={6}>
-        <HStack justifyContent="space-around" width="100%">
+      <VStack spacing={6} height="100%">
+        <HStack
+          justifyContent="space-around"
+          width="100%"
+          alignItems="center"
+          height="100%"
+        >
           <Image src="/images/logo.jpg" alt="Yash Bhandare" boxSize="500px" />
+          {infoSection()}
           {rightSection()}
         </HStack>
       </VStack>

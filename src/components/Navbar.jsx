@@ -53,12 +53,23 @@ export default function Navbar() {
               md: "flex",
             }}
           >
-            <Image
-              src="/images/Logo Horizontal.png"
-              alt="Yash Bhandare"
-              height="78px"
-              padding="4px"
-            />
+            <Link
+              key="/"
+              to="/"
+              style={{
+                padding: "8px 36px",
+                borderRadius: "5px",
+                color: textColor,
+                textDecoration: "none",
+              }}
+            >
+              <Image
+                src="/images/Logo Horizontal.png"
+                alt="Yash Bhandare"
+                height="78px"
+                padding="4px"
+              />
+            </Link>
             <Flex marginLeft="36px">
               {navLinks.map((link) => (
                 <Link

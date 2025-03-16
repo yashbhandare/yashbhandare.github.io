@@ -17,12 +17,12 @@ export default function Contact() {
 
   return (
     <VStack
-      minH="100vh"
+      minH="80vh"
       p={4}
       style={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        // justifyContent: "center",
       }}
     >
       <Container
@@ -32,6 +32,7 @@ export default function Contact() {
         borderRadius="lg"
         boxShadow="lg"
         textAlign="center"
+        marginTop="80px"
       >
         <Heading size="lg" mb={4} color={cardText}>
           Reach Out to Us

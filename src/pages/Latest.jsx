@@ -25,7 +25,7 @@ const latestUpdates = [
   {
     title: "Recent Single Launch",
     description: "Jaane Tamanna",
-    image: "/images/Jaane Tamanna card.jpg",
+    image: "/images/Jaane Tamanna card1.jpg",
   },
 ];
 

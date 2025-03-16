@@ -16,7 +16,15 @@ export default function Contact() {
   const textColor = useColorModeValue("#083f3e", "white");
 
   return (
-    <VStack minH="100vh" p={4}>
+    <VStack
+      minH="100vh"
+      p={4}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+    >
       <Container
         maxW="sm"
         bg={cardBg}

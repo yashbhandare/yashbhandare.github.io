@@ -5,6 +5,7 @@ import {
   Button,
   useColorMode,
   useColorModeValue,
+  Image,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Link, useLocation } from "react-router-dom";
@@ -37,26 +38,47 @@ export default function Navbar() {
       top="0"
       zIndex="10"
     >
-      <Flex h={16} alignItems="center" justifyContent="space-between">
+      <Flex
+        h={16}
+        alignItems="center"
+        justifyContent="space-between"
+        minH="8vh"
+      >
         <HStack spacing={8} alignItems="center">
-          <HStack as="nav" spacing={4} display={{ base: "none", md: "flex" }}>
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to} // Use "to" instead of "href"
-                style={{
-                  padding: "8px 12px",
-                  borderRadius: "5px",
-                  backgroundColor:
-                    location.pathname === link.to ? activeColor : bgColor,
-                  fontWeight: location.pathname === link.to ? "bold" : "normal",
-                  color: textColor,
-                  textDecoration: "none",
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <HStack
+            as="nav"
+            spacing={4}
+            display={{
+              base: "none",
+              md: "flex",
+            }}
+          >
+            <Image
+              src="/images/Logo Horizontal.png"
+              alt="Yash Bhandare"
+              height="78px"
+              padding="4px"
+            />
+            <Flex marginLeft="36px">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  style={{
+                    padding: "8px 36px",
+                    borderRadius: "5px",
+                    backgroundColor:
+                      location.pathname === link.to ? activeColor : bgColor,
+                    fontWeight:
+                      location.pathname === link.to ? "bold" : "normal",
+                    color: textColor,
+                    textDecoration: "none",
+                  }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </Flex>
           </HStack>
         </HStack>
         <Flex alignItems="center">

@@ -76,7 +76,7 @@ export default function Piano() {
         <TabList>
           <Tab color={headingColor}>Hindi</Tab>
           <Tab color={headingColor}>Marathi</Tab>
-          <Tab color={headingColor}>Playlists</Tab>
+          {/*<Tab color={headingColor}>Playlists</Tab>*/}
         </TabList>
         <TabPanels>
           {[hindiVideos, marathiVideos, playlists].map((_, tabIndex) => (

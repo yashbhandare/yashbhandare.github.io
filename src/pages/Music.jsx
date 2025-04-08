@@ -12,6 +12,11 @@ import { FaYoutube } from "react-icons/fa";
 
 const tracks = [
   {
+    title: "Tumse Judi Hai",
+    spotifyUrl: "https://open.spotify.com/embed/track/6A9EQUFcSecW6WaWEsIjQu",
+    youtubeUrl: "7NXmqM6UJTc",
+  },
+  {
     title: "Jaane Tamanna",
     spotifyUrl: "https://open.spotify.com/embed/track/2u76EZnnsKTBNAtUpveZMx",
     youtubeUrl: "vANUkJ1E54Y",
@@ -43,8 +48,6 @@ export default function Music() {
       <Heading textAlign="center" mb={8} color={textColor}>
         Yash Bhandare - Original Sound Tracks
       </Heading>
-
-      {/* Responsive Grid */}
       <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={6}>
         {tracks.map((track, index) => (
           <Box

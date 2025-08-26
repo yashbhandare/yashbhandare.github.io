@@ -34,6 +34,64 @@ const tracks = [
       "Produced by: Yash Bhandare Productions",
   },
   {
+    title: "Instavale Pyaar Mein",
+    spotifyUrl: "https://open.spotify.com/embed/track/0ehTgSbexYwzSyOoH4g7Qg",
+    youtubeUrl: "61qfimx4FIw",
+    description:
+      "Instavale Pyaar Mein Dil Mera Kho Gaya\n" +
+      "\n" +
+      "Written, Composed & Sung by Yash Bhandare\n" +
+      "\n" +
+      "Music Arrangement & Programming: Yash Bhandare\n" +
+      "Rhythm Section: Ruturaj Kore\n" +
+      "Recording & Mixing: N V Siddhesh, Dotwave Studio\n" +
+      "Mastering: Satyajeet Ranade, Dotwave Studio\n" +
+      "Produced by Yash Bhandare Productions",
+  },
+  {
+    title: "Jo Apna Tha Mera",
+    spotifyUrl: "https://open.spotify.com/embed/track/0QAbWnn8UW46IFE1laQ0nG",
+    youtubeUrl: "0i8dZdnUxtE",
+    description:
+      "Jo Apna Tha Mera\n" +
+      "\n" +
+      "Written, Composed & Sung by Yash Bhandare\n" +
+      "\n" +
+      "Music Arrangement & Programming: Yash Bhandare\n" +
+      "Recording & Mixing: N V Siddhesh, Dotwave Studio\n" +
+      "Mastering: Satyajeet Ranade, Dotwave Studio\n" +
+      "Videography: Sujay Bhandare\n" +
+      "Produced by Yash Bhandare Productions",
+  },
+  {
+    title: "Chalna Hi Jeevan Hai",
+    spotifyUrl: "https://open.spotify.com/embed/track/4umjnSHghqOENYl7xfSozZ",
+    youtubeUrl: "SPpG2jQbT7A",
+    description:
+      "Chalna Hi Jeevan Hai\n" +
+      "\n" +
+      "Written, Composed & Sung by Yash Bhandare\n" +
+      "\n" +
+      "Music Arrangement, Programming & Piano: Yash Bhandare\n" +
+      "Recording & Mixing: N V Siddhesh, Dotwave Studio\n" +
+      "Mastering: Satyajeet Ranade, Dotwave Studio\n" +
+      "Videography: Sujay Bhandare\n" +
+      "Produced by Yash Bhandare Productions",
+  },
+  {
+    title: "Rainy Stories - A Symphony",
+    spotifyUrl: "https://open.spotify.com/embed/track/6PFQshAEiZAJfQTuB9V5JC",
+    youtubeUrl: "dSliuPTfY2w",
+    description:
+      '"Rainy Stories - A symphony" is a journey through the many moods of rain — romance, happiness, innocence, sadness, loneliness, beauty and more — each movement unfolding like a story whispered by the clouds!\n' +
+      "\n" +
+      "Music Composer, Arranger, Programmer: Yash Bhandare\n" +
+      "\n" +
+      "Mixing & Mastering: Anand Kurhekar\n" +
+      "\n" +
+      "Producer: Yash Bhandare Productions",
+  },
+  {
     title: "Jaane Tamanna",
     spotifyUrl: "https://open.spotify.com/embed/track/2u76EZnnsKTBNAtUpveZMx",
     youtubeUrl: "vANUkJ1E54Y",

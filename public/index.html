@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yash Bhandare</title>
+    <script type="text/javascript">
+      (function() {
+        // Redirect handler for GitHub Pages SPA refreshes
+        var l = window.location;
+        if (l.search && l.search.indexOf('?p=') === 0) {
+          var params = new URLSearchParams(l.search);
+          var path = params.get('p') || '/';
+          var hash = params.get('h');
+          window.history.replaceState(null, null, '/' + path + (hash ? ('#' + hash) : ''));
+        }
+      })();
+    </script>
 </head>
 <body>
 <div id="root"></div> <!-- React mounts here -->

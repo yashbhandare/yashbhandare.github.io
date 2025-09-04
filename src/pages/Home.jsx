@@ -25,26 +25,43 @@ export default function Home() {
 
   const rightSection = () => (
     <VStack>
-      <Image src="/images/yash-nav.png" alt="Yash Bhandare" boxSize="500px" />
+      <Image
+        src="/images/yash-nav.png"
+        alt="Yash Bhandare"
+        boxSize={{ base: "220px", sm: "280px", md: "360px", lg: "420px" }}
+        objectFit="cover"
+      />
     </VStack>
   );
 
   const infoSection = () => (
-    <VStack>
-      <Heading as="h1" size="xl" color={textColor}>
+    <VStack
+      spacing={{ base: 3, md: 4 }}
+      align={{ base: "center", md: "center" }}
+    >
+      <Heading
+        as="h1"
+        size={{ base: "lg", md: "xl" }}
+        color={textColor}
+        textAlign="center"
+      >
         Yash Bhandare
       </Heading>
-      <Text fontSize="lg" color={textColor}>
+      <Text
+        fontSize={{ base: "md", md: "lg" }}
+        color={textColor}
+        textAlign="center"
+      >
         Music Composer | Arranger
         <br />
         Pianist | Keyboardist
       </Text>
-      <Flex gap={4} justify="center">
+      <Flex gap={{ base: 2, md: 4 }} justify="center" wrap="wrap">
         <Link to={INSTAGRAM_LINK} isExternal>
           <IconButton
             icon={<FaInstagram />}
             aria-label="Instagram"
-            size="lg"
+            size={{ base: "md", md: "lg" }}
             variant="solid"
             bg={bgColor}
             color="pink.400"
@@ -60,7 +77,7 @@ export default function Home() {
           <IconButton
             icon={<FaYoutube />}
             aria-label="YouTube"
-            size="lg"
+            size={{ base: "md", md: "lg" }}
             variant="solid"
             bg={bgColor}
             color="red.500"
@@ -76,7 +93,7 @@ export default function Home() {
           <IconButton
             icon={<FaFacebook />}
             aria-label="Facebook"
-            size="lg"
+            size={{ base: "md", md: "lg" }}
             variant="solid"
             bg={bgColor}
             color="blue.400"
@@ -95,7 +112,7 @@ export default function Home() {
           <IconButton
             icon={<FaSpotify />}
             aria-label="Spotify"
-            size="lg"
+            size={{ base: "md", md: "lg" }}
             variant="solid"
             bg={bgColor}
             color="#1a7a40"
@@ -119,7 +136,7 @@ export default function Home() {
           <IconButton
             icon={<FaAmazon />}
             aria-label="Amazon Music"
-            size="lg"
+            size={{ base: "md", md: "lg" }}
             variant="solid"
             bg="8fbc8f"
             color="orange.500"
@@ -141,18 +158,30 @@ export default function Home() {
   );
 
   return (
-    <Box bg={bgColor} p={8} h="86vh" textAlign="center">
-      <VStack spacing={6} height="100%">
-        <HStack
+    <Box
+      bg={bgColor}
+      p={{ base: 4, md: 8 }}
+      minH={{ base: "auto", md: "86vh" }}
+      textAlign="center"
+    >
+      <VStack spacing={{ base: 6, md: 6 }} height="100%">
+        <Flex
           justifyContent="space-around"
           width="100%"
           alignItems="center"
           height="100%"
+          direction={{ base: "column", md: "row" }}
+          gap={{ base: 6, md: 4 }}
         >
-          <Image src="/images/logo.jpg" alt="Yash Bhandare" boxSize="500px" />
+          <Image
+            src="/images/logo.jpg"
+            alt="Yash Bhandare"
+            boxSize={{ base: "180px", sm: "240px", md: "320px", lg: "400px" }}
+            objectFit="cover"
+          />
           {infoSection()}
           {rightSection()}
-        </HStack>
+        </Flex>
       </VStack>
     </Box>
   );

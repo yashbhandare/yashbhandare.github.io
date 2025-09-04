@@ -213,32 +213,32 @@ export default function Music() {
                     }}
                   />
                 </AspectRatio>
-                <Button
-                  leftIcon={<FaApple />}
-                  colorScheme="red"
-                  variant="solid"
-                  size="sm"
-                  height="40px"
-                  as="a"
-                  href={track.appleMusicUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apple Music
-                </Button>
-                <Button
-                  leftIcon={<FaAmazon />}
-                  colorScheme="yellow"
-                  variant="solid"
-                  size="sm"
-                  height="40px"
-                  as="a"
-                  href={track.amazonMusicUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Amazon Music
-                </Button>
+                {/* <Button */}
+                {/*  leftIcon={<FaApple />} */}
+                {/*  colorScheme="red" */}
+                {/*  variant="solid" */}
+                {/*  size="sm" */}
+                {/*  height="40px" */}
+                {/*  as="a" */}
+                {/*  href={track.appleMusicUrl} */}
+                {/*  target="_blank" */}
+                {/*  rel="noopener noreferrer" */}
+                {/* > */}
+                {/*  Apple Music */}
+                {/* </Button> */}
+                {/* <Button */}
+                {/*  leftIcon={<FaAmazon />} */}
+                {/*  colorScheme="yellow" */}
+                {/*  variant="solid" */}
+                {/*  size="sm" */}
+                {/*  height="40px" */}
+                {/*  as="a" */}
+                {/*  href={track.amazonMusicUrl} */}
+                {/*  target="_blank" */}
+                {/*  rel="noopener noreferrer" */}
+                {/* > */}
+                {/*  Amazon Music */}
+                {/* </Button> */}
                 {track.description && (
                   <Box mt={2}>
                     {track.description.split("\n").map((line, i) => (

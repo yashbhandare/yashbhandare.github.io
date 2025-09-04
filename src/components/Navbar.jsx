@@ -29,7 +29,7 @@ export default function Navbar() {
     { label: "Music", to: "/music" },
     { label: "Piano", to: "/piano" },
     { label: "Gallery", to: "/gallery" },
-    { label: "Latest", to: "/latest" },
+    // { label: "Latest", to: "/latest" },
     { label: "Contact", to: "/contact" },
   ];
 

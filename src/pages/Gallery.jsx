@@ -25,7 +25,7 @@ export default function Gallery() {
     require.context("../../public/images/gallery", false, /\.(png|jpe?g|svg)$/),
   );
 
-  const photos = useMemo(() => randomizeOrder(images), [images]);
+  const [photos] = useState(() => randomizeOrder(images));
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [currentIndex, setCurrentIndex] = useState(0);

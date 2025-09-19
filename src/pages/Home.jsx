@@ -52,9 +52,9 @@ export default function Home() {
         color={textColor}
         textAlign="center"
       >
-        Music Composer | Arranger
+        Composer | Singer | Arranger
         <br />
-        Pianist | Keyboardist
+        Piano | Keyboard
       </Text>
       <Flex gap={{ base: 2, md: 4 }} justify="center" wrap="wrap">
         <Link to={INSTAGRAM_LINK} isExternal>
